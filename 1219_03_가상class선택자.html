@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{color: black; text-decoration: none;}
+        a:hover{text-decoration: underline;}
+        /* a:focus{outline: none;}  키보드의 tab키를 눌렀을때 */
+        a:active{color: darkorchid;}
+        a:first-child{background-color: aqua;}
+        a:last-child{background-color: aqua;}
+        a:nth-child(2){background-color: aqua;}
+        /* p:first-of-type{background-color: cadetblue;} */
+        /* p:last-of-type{background-color: cadetblue;} */
+        /* p:nth-of-type(2n+1){background-color: steelblue;} 홀수 1,,3,,5 */
+        /* p:nth-of-type(2n){background-color: steelblue;} 짝수 2,,4,,6 */
+        p:nth-of-type(3){background-color: powderblue;}
+        span:only-child{background-color: teal;}
+        span:only-of-type{background-color: teal;}
+        :not(p){border: 1px solid;}
+    </style>
+</head>
+<body>
+    <a href="#">링크</a>
+    <a href="#">링크</a>
+    <a href="#">링크</a>
+    <a href="#">링크</a>
+    <a href="#">링크</a>
+    <p>문단1</p>
+    <p>문단2</p>
+    <p>문단3</p>
+    <p>문단4</p>
+    <p>문단5</p>
+    <span>인라인</span>
+    <h1>
+        <span>인라인</span>
+        <a href="#">링크</a>
+    </h1>
+    <h2>
+        <span>인라인태그</span>
+    </h2>
+</body>
+</html>

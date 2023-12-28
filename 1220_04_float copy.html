@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        section{border: 1px solid; width: 800px; overflow: hidden; margin: 0 auto;}
+        section>div{width: 50px; height: 50px; background-color: #ccc;  float: left; 
+            /* margin-right: 266.67px; */ 
+            margin-right: calc((800px - 150px) / 2);
+            /* calc 연산자 왼쪽 오른쪽 공백처리 후, 우선순위 연산은 ()로 묶어주고 수치에는 단위를 꼭 쓰기(px등등) */
+        }
+        section>div:last-child{margin-right: 0;}
+      
+    </style>
+</head>
+<body>
+    <section>
+        <div>one</div>
+        <div>two</div>
+        <div>three</div>
+    </section>
+</body>
+</html>

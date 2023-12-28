@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>화이트스페이스</title>
+    <style>
+      html{font-size: 30px;}
+      section{width: 800px; border: 1px solid;}
+      p{width: 300px; border: 1px solid;}
+      .nomal{white-space: nomal;}
+      .nowrap{white-space: nowrap;}
+      .pre{white-space: pre;}
+      .pre-wrap{white-space: pre-wrap;}
+      .pre-line{white-space: pre-line;}
+      p{white-space: nowrap; overflow: hidden; text-overflow: clip;}
+      div{
+        width: 200px;
+        border: 1px solid;
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+     </style>
+  </head>
+  <body>
+    <section class="nomal">nomal속성T                                     here 
+      are many variations of passages 
+      of Lorem Ipsum available, 
+    </section>
+    <section class="nowrap">nowrap속성
+      T                                     here are many variations of passages 
+      of Lorem Ipsum available,
+    </section>
+    <section class="pre">pre속성
+      T                                     here are many variations of passages 
+      of Lorem Ipsum available,
+    </section>
+    <section class="pre-wrap">pre-wrap속성
+      T                                     here are many variations of passages 
+      of Lorem Ipsum available,
+    </section>
+    <section class="pre-line">pre-line속성
+      T                                     here are many variations of passages of Lorem Ipsum available,
+    </section>
+    <p>T                                     here are many variations of passages of Lorem Ipsum available,
+    </section></p>
+    <div>T                                     here are many variations of passages of Lorem Ipsum available,</div>
+  </body>
+</html>
