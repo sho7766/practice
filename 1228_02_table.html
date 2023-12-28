@@ -5,12 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+      }
+      td {
+        text-align: center;
+        border: 1px solid;
+        padding: 0 50px;
+      }
+      tr td:first-child {
+        border-left: none;
+        background: #ccc;
+      }
+      tr td:last-child {
+        border-right: none;
+      }
+    </style>
   </head>
   <body>
-    <table border="1" cellpadding="50" cellspacing="10">
+    <!-- <table border="1" cellpadding="50" cellspacing="10"> -->
+    <table>
       <tr>
-        <td>셀11</td>
-        <td>셀12</td>
+        <td colspan="2">셀11셀12</td>
         <td>셀13</td>
       </tr>
       <tr>

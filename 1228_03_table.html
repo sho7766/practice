@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        font-size: 28px;
+        font-weight: 100;
+        border-collapse: collapse;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+      }
+      td {
+        text-align: center;
+        border: 1px solid;
+        padding: 20px 40px;
+        border: 1px solid #ccc;
+      }
+      tr:first-child {
+        background: #eee;
+      }
+      tr:nth-child(2) td:first-of-type {
+        background: #eee;
+        padding: 20px 50px;
+      }
+      tr:nth-child(5) td:first-of-type {
+        background: #eee;
+        padding: 20px 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <table border="1" cellpadding="50" cellspacing="10"> -->
+    <table>
+      <tr>
+        <td colspan="2">지역별 홍차</td>
+      </tr>
+      <tr>
+        <td rowspan="3">중국</td>
+        <td>정산소종</td>
+      </tr>
+      <tr>
+        <td>기문</td>
+      </tr>
+      <tr>
+        <td>운남</td>
+      </tr>
+      <tr>
+        <td rowspan="5">인도 및 스리랑카</td>
+      </tr>
+      <tr>
+        <td>아삼</td>
+      </tr>
+      <tr>
+        <td>실론</td>
+      </tr>
+      <tr>
+        <td>다질링</td>
+      </tr>
+      <tr>
+        <td>닐기리</td>
+      </tr>
+    </table>
+  </body>
+</html>
