@@ -1,0 +1,114 @@
+@charset "utf-8";
+@font-face {
+  font-family: Pretendard;
+  src: url(../../webfonts/Pretendard-Regular.woff);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  color: #111111;
+  text-decoration: none;
+}
+body {
+  font-family: Pretendard;
+}
+.wrap {
+  width: 100vw;
+  height: 100vh;
+}
+header {
+  position: relative;
+  width: 100%;
+  height: 87px;
+  border-bottom: 1px solid #ebacc7;
+  background: #eed9e2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+header.active {
+  background: #fff;
+}
+header.active:before {
+  height: 660px;
+}
+header::before {
+  position: absolute;
+  top: 87px;
+  content: "";
+  background: #fff;
+  opacity: 0.8;
+  width: 100%;
+  height: 0;
+  transition: height 0.5s ease-in-out;
+}
+header .logo {
+  padding-left: 102px;
+  width: 121px;
+  height: 34px;
+}
+header .logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../images/logo.svg) no-repeat;
+}
+header .nav ul {
+  display: flex;
+  gap: 50px;
+}
+header .nav ul li {
+  font-size: 15px;
+  letter-spacing: -2.5%;
+  line-height: 120%;
+}
+header .nav ul li:hover a {
+  font-weight: 600;
+}
+header .nav ul li.on a {
+  color: #555;
+}
+.i_menu {
+  padding-right: 102px;
+}
+.i_menu button {
+  border: 0;
+  width: 20px;
+  height: 20px;
+  background: none;
+  margin-left: 40px;
+}
+.i_menu button:first-child {
+  margin-left: 0;
+}
+.i_menu button a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.i_menu button .search {
+  background: url(../images/search.svg) no-repeat center;
+}
+.i_menu button .like {
+  background: url(../images/like.svg) no-repeat center;
+}
+.i_menu button .user {
+  background: url(../images/user.svg) no-repeat center;
+}
+.i_menu button .user {
+  background: url(../images/user.svg) no-repeat center;
+}
+.i_menu button .bag {
+  background: url(../images/bag.svg) no-repeat center;
+}
+.main_visual {
+  width: 100%;
+  height: 100%;
+  background: url(../images/slide01.jpg) no-repeat center 100% /100%;
+}
