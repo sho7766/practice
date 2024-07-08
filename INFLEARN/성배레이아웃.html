@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>성배 레이아웃 그리드ver.</title>
+    <style>
+      .container {
+        display: grid;
+        height: 500px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+          "header header header header header"
+          "sidebar1 main main main sidebar2"
+          "sidebar1 main main main sidebar2"
+          "footer footer footer footer footer";
+        gap: 0.5rem;
+      }
+      .item {
+        padding: 20px 0;
+        background-color: peachpuff;
+        text-align: center;
+        border-radius: 20px;
+      }
+      .header {
+        grid-area: header;
+      }
+      .main {
+        grid-area: main;
+      }
+      .sidebar1 {
+        grid-area: sidebar1;
+        background-color: gainsboro;
+      }
+      .sidebar2 {
+        grid-area: sidebar2;
+        background-color: gainsboro;
+      }
+      .footer {
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="item header">Header</header>
+      <div class="item sidebar1">Sidebar</div>
+      <div class="item main">Main</div>
+      <div class="item sidebar2">Sidebar</div>
+      <footer class="item footer">Footer</footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레츠코레일-Let'sKorail</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="inner">
+        <div class="link_box">
+          <a href="" class="link">
+            <span class="text_box">
+              <span class="text_type1"
+                ><span class="text_style1">네이버, 네이버 지도, 카카오T</span
+                >에서도</span
+              >
+              <span class="text_type2"
+                >편리하고 빠르게 <span class="text_style2">승차권 구매</span>가
+                가능합니다</span
+              >
+            </span>
+          </a>
+        </div>
+        <div class="btn_close">
+          <input type="checkbox" id="bannerClose" />
+          <label for="bannerClose">오늘 하루 닫기</label>
+          <div class="icon_close"></div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <header>
+        <div class="header_top">
+          <div class="menu">
+            <div class="menu_left">
+              <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">코레일멤버십</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">코레일홈페이지</a></li>
+                <li><a href="#">기업전용</a></li>
+              </ul>
+            </div>
+            <div class="menu_right">
+              <ul>
+                <li><a href="#">Language</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">장바구니</a></li>
+                <li><a href="#">마이페이지</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="gnb">
+          <div class="gnb_menu">
+            <div class="logo">
+              <a href="#"
+                ><img
+                  src="images/lets_logo_blue.webp"
+                  alt="레츠코레일로고 블루"
+              /></a>
+            </div>
+            <div class="search">
+              <div class="input_box">
+                <div class="search_icon">
+                  <img src="images/icon_search.png" alt="search_icon" />
+                </div>
+                <input
+                  type="text"
+                  placeholder="검색어를 입력해주세요."
+                  maxlength="30"
+                />
+              </div>
+            </div>
+            <div class="gnb_right">
+              <ul class="main_menu">
+                <li class="main_01">
+                  <a href="#">승차권</a>
+                  <div class="sub">
+                    <div class="sub_menu sub_01">
+                      <ul class="one_depth">
+                        <li>
+                          <a href="#" class="sub_title">승차권 예약</a>
+                          <ul class="two_depth">
+                            <li><a href="#">일반승차권</a></li>
+                            <li><a href="#">할인승차권</a></li>
+                            <li><a href="#">4인 동반석</a></li>
+                            <li><a href="#">일반승차권</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <ul class="one_depth">
+                        <li>
+                          <a href="#" class="sub_title">발권 / 취소 / 변경</a>
+                          <ul class="two_depth">
+                            <li><a href="#">발권/취소(반환)</a></li>
+                            <li><a href="#">예약변경</a></li>
+                            <li><a href="#">이용내역/영수증출력</a></li>
+                            <li><a href="#">과거이용내역신청/조회</a></li>
+                            <li><a href="#">도시락/제휴상품영수증</a></li>
+                            <li><a href="#">인터넷반환접수</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <ul class="one_depth">
+                        <li>
+                          <a href="#" class="sub_title">정기승차권</a>
+                          <ul class="two_depth">
+                            <li><a href="#">정기승차권 조회</a></li>
+                            <li><a href="#">정기승차권 발급</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <ul class="one_depth">
+                        <li>
+                          <a href="#" class="sub_title">비회원 서비스</a>
+                          <ul class="two_depth">
+                            <li><a href="#">승차권예약</a></li>
+                            <li><a href="#">발권/취소(반환)</a></li>
+                            <li><a href="#">받은승차권 예약취소</a></li>
+                            <li><a href="#">승차권재발권</a></li>
+                            <li><a href="#">이용내역/영수증출력</a></li>
+                            <li>
+                              <a href="#">외부 플랫폼 승차권 영수증 출력</a>
+                            </li>
+                            <li><a href="#">지연료 계좌반환 신청</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <ul class="one_depth">
+                        <li><a href="#" class="sub_title">이용안내</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="main_02">
+                  <a href="#">승차권제휴할인</a>
+                  <div class="sub">
+                    <div class="sub_menu sub_02">
+                      <ul class="one_depth">
+                        <li>
+                          <a href="#" class="sub_title">역별 제휴사 안내</a>
+                        </li>
+                      </ul>
+                      <ul class="one_depth">
+                        <li><a href="#" class="sub_title">제휴사업 문의</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="main_03">
+                  <a href="#">여행상품</a>
+                  <div class="sub">
+                    <div class="sub_menu sub_03">
+                      <ul class="one_depth">
+                        <li>
+                          <a href="#" class="sub_title">테마패키지</a>
+                          <ul class="two_depth">
+                            <li><a href="#">우리지역 대표상품</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <ul class="one_depth">
+                        <li>
+                          <a href="#" class="sub_title">KTX + 연계서비스</a>
+                          <ul class="two_depth">
+                            <li><a href="#">레일텔</a></li>
+                            <li><a href="#">레일쉡-제주도(목포)</a></li>
+                            <li><a href="#">레일쉡-제주도(여수)</a></li>
+                            <li><a href="#">레일쉡-울릉도(포항,경주)</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <ul class="one_depth">
+                        <li>
+                          <a href="#" class="sub_title">국내패키지</a>
+                          <ul class="two_depth">
+                            <li><a href="#">수도권</a></li>
+                            <li><a href="#">강원권</a></li>
+                            <li><a href="#">충청권</a></li>
+                            <li><a href="#">경상권</a></li>
+                            <li><a href="#">전라권</a></li>
+                            <li><a href="#">제주권</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <ul class="one_depth">
+                        <li>
+                          <a href="#" class="sub_title">이달의 기차여행</a>
+                        </li>
+                      </ul>
+                      <ul class="one_depth">
+                        <li>
+                          <a href="#" class="sub_title">여행상품 예약확인</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="main_04">
+                  <a href="#">종합이용안내</a>
+                  <div class="sub">
+                    <div class="sub_menu sub_04">
+                      <ul class="one_depth">
+                        <li>
+                          <a href="#" class="sub_title">할인 및 부가서비스</a>
+                        </li>
+                      </ul>
+                      <ul class="one_depth">
+                        <li>
+                          <a href="#" class="sub_title">승차권 이용안내</a>
+                        </li>
+                      </ul>
+                      <ul class="one_depth">
+                        <li>
+                          <a href="#" class="sub_title">교통약자 배려서비스</a>
+                        </li>
+                      </ul>
+                      <ul class="one_depth">
+                        <li>
+                          <a href="#" class="sub_title"
+                            >전철이용안내/지연증명</a
+                          >
+                        </li>
+                      </ul>
+                      <ul class="one_depth">
+                        <li><a href="#" class="sub_title">유실물</a></li>
+                      </ul>
+                      <ul class="one_depth">
+                        <li>
+                          <a href="#" class="sub_title">고객의소리 접수/조회</a>
+                        </li>
+                      </ul>
+                      <ul class="one_depth">
+                        <li>
+                          <a href="#" class="sub_title">철도고객센터</a>
+                        </li>
+                      </ul>
+                      <ul class="one_depth">
+                        <li>
+                          <a href="#" class="sub_title">광고안내</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="main_05">
+                  <a href="#">기차역정보/노선도</a>
+                  <div class="sub">
+                    <div class="sub_menu sub_05">
+                      <ul class="one_depth">
+                        <li>
+                          <a href="#" class="sub_title">기차역 안내</a>
+                          <ul class="two_depth">
+                            <li><a href="#">KTX역</a></li>
+                            <li><a href="#">일반철도</a></li>
+                            <li><a href="#">광역철도</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <ul class="one_depth">
+                        <li>
+                          <a href="#" class="sub_title">철도 노선안내</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="sitemap">
+                  <a href="#"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="main">
+        <div class="inner">
+          <div class="boxes">
+            <div class="reservation">
+              <div class="cate">
+                <div class="ticket">
+                  <p>승차권간편예매</p>
+                </div>
+                <div class="travel">
+                  <p>기차여행검색</p>
+                </div>
+              </div>
+              <div class="box">
+                <div class="location">
+                  <div class="depart">
+                    <div class="title">출발</div>
+                    <div class="city">영등포</div>
+                  </div>
+                  <p class="arrow">
+                    <img src="images/arrow_right.png" alt="" />
+                  </p>
+                  <div class="desti">
+                    <div class="title">도착</div>
+                    <div class="city">대전</div>
+                  </div>
+                </div>
+                <div class="schedule">
+                  <div class="cont">
+                    <span class="title">출발일</span>
+                    <div class="date_wrap">
+                      <div class="date">
+                        <div class="year">2024<span>년</span></div>
+                        <div class="month">6<span>월</span></div>
+                        <div class="days">18<span>일</span></div>
+                        <div class="day">
+                          <span>(</span><span>수</span><span>)</span>
+                        </div>
+                        <div class="time">
+                          <span class="hour">19</span><span class="mark">:</span
+                          ><span class="min">33</span>
+                        </div>
+                      </div>
+                      <button class="arrow_blue"></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="passenger">
+                  <div class="cont">
+                    <span class="title">승객 연령 및 좌석수</span>
+                    <div class="age_seat">
+                      <div class="age">어른</div>
+                      <div class="seat">1<span>명</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="reserve">
+                  <button><a href="#">승차권예매</a></button>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <h1 class="box_title">EVENT</h1>
+              <div class="box swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="#"><img src="images/Untitled-2.jpg" alt="" /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#"><img src="images/Untitled-1.jpg" alt="" /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#"><img src="images/hello_train.jpg" alt="" /></a>
+                  </div>
+                </div>
+                <div class="slide_btn">
+                  <div class="btn_left">
+                    <img src="images/btn_left.png" alt="" />
+                  </div>
+                  <div class="btn_right">
+                    <img src="images/btn_right.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="small_box">
+              <div class="discount">
+                <h1 class="box_title">KTX 할인상품</h1>
+                <div class="box">
+                  <ul>
+                    <li>
+                      <a href="#"
+                        >청소년
+                        <p>드림</p></a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        >힘내라
+                        <p>청춘</p></a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        >맘편한
+                        <p>KTX</p></a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        >다자녀
+                        <p>행복</p></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="best">
+                <h1 class="box_title">BEST 여행상품</h1>
+                <div class="box">
+                  <a href="#">
+                    <!-- 베스트 여행상품 바로가기 -->
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="quick_menu">
+        <div class="inner">
+          <ul>
+            <li><a href="#">관광열차</a></li>
+            <li><a href="#">자유여행</a></li>
+            <li><a href="#">자유여행패스</a></li>
+            <li><a href="#">회의실</a></li>
+            <li><a href="#">렌터카</a></li>
+            <li><a href="#">레일텔</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="guide">
+        <div class="inner">
+          <h1>종합이용가이드</h1>
+          <div class="box_menu">
+            <div class="box box_01">
+              <a href="#">
+                <div class="box_icon">
+                  <img
+                    src="images/ticket_use.png"
+                    alt="흰 바탕에 파란 선형 포인트가 있는 승차권 입체아이콘"
+                  />
+                </div>
+                <div class="box_text">
+                  승차권
+                  <p>이용방법</p>
+                </div>
+              </a>
+            </div>
+            <div class="box box_02">
+              <a href="#">
+                <div class="box_icon">
+                  <img
+                    src="images/bus_terminal.png"
+                    alt="회색바탕에 파란 선형 포인트가 있는 버스 입체아이콘"
+                  />
+                </div>
+                <div class="box_text">
+                  광명역
+                  <p>도심공항터미널</p>
+                </div>
+              </a>
+            </div>
+            <div class="box box_03">
+              <a href="#">
+                <div class="box_icon">
+                  <img
+                    src="images/discount.png"
+                    alt="왼쪽에는 회색동전 7개와 오른쪽에는 아래를 향하고 있는 파란색 화살표 1개로 이루어진 입체아이콘"
+                  />
+                </div>
+                <div class="box_text">할인제도</div>
+              </a>
+            </div>
+            <div class="box box_04">
+              <a href="#">
+                <div class="box_icon">
+                  <img
+                    src="images/lost_goods.png"
+                    alt="왼쪽에는 회색 휴대전화와 오른쪽에는 파란색 우산으로 이루어진 입체아이콘"
+                  />
+                </div>
+                <div class="box_text">유실물</div>
+              </a>
+            </div>
+            <div class="box box_05">
+              <a href="#">
+                <div class="box_icon">
+                  <img
+                    src="images/ktx_express.png"
+                    alt="회색동전 바탕에 파란 선형 포인트가 있는 철로위 기차모양 입체 아이콘"
+                  />
+                </div>
+                <div class="box_text">KTX특송</div>
+              </a>
+            </div>
+            <div class="box box_06">
+              <a href="#">
+                <div class="box_icon">
+                  <img
+                    src="images/time_table.png"
+                    alt="왼쪽에는 회색동전 7개와 오른쪽에는 파란색 시침, 분침이 있는 회색 테두리의 시계로 이루어진 입체 아이콘"
+                  />
+                </div>
+                <div class="box_text">
+                  열차운임/
+                  <p>시간표</p>
+                </div>
+              </a>
+            </div>
+            <div class="box box_07">
+              <a href="#">
+                <div class="box_icon">
+                  <img
+                    src="images/search_train.png"
+                    alt="파란 테두리의 돋보기 안에 회색 기차모양 입체아이콘"
+                  />
+                </div>
+                <div class="box_text">
+                  광역철도
+                  <p>노선검색</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bottom">
+        <div class="inner">
+          <div class="notice">
+            <h1>공지사항</h1>
+            <table>
+              <tr>
+                <td>
+                  <a href="#"
+                    ><p class="n_content">
+                      동해선 광역전철 운임조정 알림 ( ‘ 24. 7. 6.)
+                    </p>
+                    <span class="n_date">2024.06.27</span></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#"
+                    ><p class="n_content">
+                      영동선 일반열차 환승 승차권 발매중지 안내
+                    </p>
+                    <span class="n_date">2024.05.28</span></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#"
+                    ><p class="n_content">동해산타열차 임시 운휴 알림</p>
+                    <span class="n_date">2024.05.28</span></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#"
+                    ><p class="n_content">백두대간협곡열차 임시 운휴 알림</p>
+                    <span class="n_date">2024.05.28</span></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#"
+                    ><p class="n_content">현충일 임시열차 운행알림</p>
+                    <span class="n_date">2024.05.10</span></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#"
+                    ><p class="n_content">
+                      KTX-공항버스(6770) 시간표 변경 안내
+                    </p>
+                    <span class="n_date">2024.05.07</span></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#"
+                    ><p class="n_content">
+                      태백, 영동선 지연 및 환승 승차권 발매중지 안내
+                    </p>
+                    <span class="n_date">2024.05.02</span></a
+                  >
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="etc_menu">
+            <div class="left">
+              <div class="item business_card">
+                <a href="#">
+                  <div class="item_text">
+                    <p class="title">출장N <span>기업용 N카드</span></p>
+                    <p class="desc">
+                      비즈니스 고객을 위한<span>횟수차감형 할인카드</span>
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="item illegal_ticket">
+                <a href="#">
+                  <div class="item_text">
+                    <p class="title">암표제보</p>
+                    <p class="desc">제보하러가기</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="right">
+              <div class="item idea">
+                <a href="#">
+                  <div class="item_text">
+                    <p class="title">서비스<span>아이디어 제안</span></p>
+                    <p class="desc">접수하러가기</p>
+                  </div>
+                </a>
+              </div>
+              <div class="item deposit">
+                <a href="#">
+                  <div class="item_text">
+                    <p class="title">예약보관금 찾기</p>
+                    <p class="desc">
+                      코레일 멤버십<span>보증금을 돌려드려요!</span>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="inner">
+          <div class="f_banner">
+            <ul>
+              <li>
+                <img
+                  src="images/ban01.gif"
+                  alt="국가브랜드 2년연속 대상(혁신경영부분)"
+                />
+              </li>
+              <li>
+                <img
+                  src="images/ban02.gif"
+                  alt="대한민국 지속가능성지수 1위(KSI)"
+                />
+              </li>
+              <li>
+                <img src="images/ban03.gif" alt="부패방지 시책평가 대통령상" />
+              </li>
+              <li>
+                <img
+                  src="images/ban04.gif"
+                  alt="전국품질분임조경진대회 11연속 대통령상"
+                />
+              </li>
+              <li>
+                <img
+                  src="images/ban05.gif"
+                  alt="소비자중심경영 대통령표창 수상"
+                />
+              </li>
+              <li>
+                <img
+                  src="images/ban06.gif"
+                  alt="대한민국인터넷소통대상 공기업부문대상"
+                />
+              </li>
+              <li>
+                <img
+                  src="images/ban07.gif"
+                  alt="소비자중심경영(CCM)4회 연속 인증 획득"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="f_logo">
+            <img src="images/logo_gray.png" alt="회색 레츠코레일로고" />
+          </div>
+          <div class="f_inform">
+            <ul>
+              <li>한국철도공사</li>
+              <li>대표 : <span>한문희</span></li>
+              <li>사업자등록 : <span>314-82-10024</span></li>
+              <li>통신판매업신고 : <span>대전동구-0233호</span></li>
+            </ul>
+            <ul>
+              <li>주소 : <span>(34618)대전광역시 동구 중앙로240</span></li>
+              <li>TEL : <span>1544-7788(이용료 발신자 부담)</span></li>
+              <li>FAX : <span>02-361-8385</span></li>
+            </ul>
+            <div class="copyright">
+              <p>COPYRIGHT ⓒ KOREA RAILROAD.ALL RIGHTS RESERVED.</p>
+            </div>
+          </div>
+          <div class="f_right">
+            <div class="sns">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img src="images/naverblog.png" alt="네이버블로그 아이콘"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/facebook.png" alt="페이스북 아이콘"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/instagram.png" alt="인스타그램 아이콘"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/youtube.png" alt="유튜브 아이콘"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/twitter.png" alt="트위터 아이콘"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <div class="fam_site">
+              <a href="#">코레일 FAMILY</a>
+            </div>
+          </div>
+          <div class="f_menu">
+            <ul>
+              <li><a href="#">고객서비스현장</a></li>
+              <li><a href="#">보도자료</a></li>
+              <li><a href="#">홈페이지이용약관</a></li>
+              <li><a href="#">여객운송약관/부속약관</a></li>
+              <li><a href="#">정보공개</a></li>
+              <li><a href="#" class="personal_info">개인정보처리방침</a></li>
+              <li><a href="#">이메일무단수집거부</a></li>
+              <li><a href="#">광고안내</a></li>
+              <li><a href="#">저작권정책</a></li>
+              <li><a href="#">러브포인트</a></li>
+              <li><a href="#">이벤트</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        rewind: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      });
+      $(".icon_close").click(function () {
+        $(".banner").hide();
+      });
+      $(".main_menu > li > a").mouseenter(function () {
+        $(".sub").css("height", "296px");
+      });
+    </script>
+  </body>
+</html>

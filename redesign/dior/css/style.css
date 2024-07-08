@@ -11,7 +11,7 @@ ul {
   list-style: none;
 }
 a {
-  color: #111111;
+  color: #111;
   text-decoration: none;
 }
 body {
@@ -59,20 +59,25 @@ header .logo a {
   height: 100%;
   background: url(../images/logo.svg) no-repeat;
 }
-header .nav ul {
+header .nav {
+  position: relative;
+}
+header .nav > ul {
   display: flex;
   gap: 50px;
 }
-header .nav ul li {
+header .nav > ul > li {
   font-size: 15px;
   letter-spacing: -2.5%;
   line-height: 120%;
 }
-header .nav ul li:hover a {
+header .nav > ul > li:hover > a {
   font-weight: 600;
 }
-header .nav ul li.on a {
-  color: #555;
+header .nav > ul > li > a {
+  color: #111;
+}
+header .sub_menu {
 }
 .i_menu {
   padding-right: 102px;

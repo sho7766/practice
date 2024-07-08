@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid 기초</title>
+    <style>
+      .container {
+        display: grid;
+        height: 500px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 500px);
+        grid-template-areas:
+          "header header header"
+          "sidebar-left main sidebar-right"
+          "sidebar-left main sidebar-right"
+          "footer footer footer";
+      }
+      .header {
+        grid-area: header;
+        background-color: powderblue;
+      }
+      .sidebar-left {
+        grid-area: sidebar-left;
+        background-color: palevioletred;
+      }
+      .sidebar-right {
+        grid-area: sidebar-right;
+        background-color: palevioletred;
+      }
+      .main {
+        grid-area: main;
+        background-color: plum;
+      }
+      .footer {
+        grid-area: footer;
+        background-color: palegreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item header">Header</div>
+      <div class="item main">Main</div>
+      <div class="item sidebar-left">sideL</div>
+      <div class="item sidebar-right">sideR</div>
+      <div class="item footer">Footer</div>
+    </div>
+  </body>
+</html>
