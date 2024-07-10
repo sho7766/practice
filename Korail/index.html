@@ -9,12 +9,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
     <div class="banner">
@@ -361,12 +363,8 @@
                   </div>
                 </div>
                 <div class="slide_btn">
-                  <div class="btn_left">
-                    <img src="images/btn_left.png" alt="" />
-                  </div>
-                  <div class="btn_right">
-                    <img src="images/btn_right.png" alt="" />
-                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
                 </div>
               </div>
             </div>
@@ -428,96 +426,166 @@
       </section>
       <section class="guide">
         <div class="inner">
-          <h1>종합이용가이드</h1>
+          <div
+            data-aos="fade-right"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-duration="400"
+            data-aos-easing="ease-in-out"
+          >
+            <h1>종합이용가이드</h1>
+          </div>
           <div class="box_menu">
-            <div class="box box_01">
-              <a href="#">
-                <div class="box_icon">
-                  <img
-                    src="images/ticket_use.png"
-                    alt="흰 바탕에 파란 선형 포인트가 있는 승차권 입체아이콘"
-                  />
-                </div>
-                <div class="box_text">
-                  승차권
-                  <p>이용방법</p>
-                </div>
-              </a>
+            <div
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom"
+              data-aos-offset="100"
+              data-aos-delay="50"
+              data-aos-duration="400"
+              data-aos-easing="ease-in-out"
+            >
+              <div class="box box_01">
+                <a href="#">
+                  <div class="box_icon">
+                    <img
+                      src="images/ticket_use.png"
+                      alt="흰 바탕에 파란 선형 포인트가 있는 승차권 입체아이콘"
+                    />
+                  </div>
+                  <div class="box_text">
+                    승차권
+                    <p>이용방법</p>
+                  </div>
+                </a>
+              </div>
             </div>
-            <div class="box box_02">
-              <a href="#">
-                <div class="box_icon">
-                  <img
-                    src="images/bus_terminal.png"
-                    alt="회색바탕에 파란 선형 포인트가 있는 버스 입체아이콘"
-                  />
-                </div>
-                <div class="box_text">
-                  광명역
-                  <p>도심공항터미널</p>
-                </div>
-              </a>
+            <div
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom"
+              data-aos-offset="100"
+              data-aos-delay="100"
+              data-aos-duration="400"
+              data-aos-easing="ease-in-out"
+            >
+              <div class="box box_02">
+                <a href="#">
+                  <div class="box_icon">
+                    <img
+                      src="images/bus_terminal.png"
+                      alt="회색바탕에 파란 선형 포인트가 있는 버스 입체아이콘"
+                    />
+                  </div>
+                  <div class="box_text">
+                    광명역
+                    <p>도심공항터미널</p>
+                  </div>
+                </a>
+              </div>
             </div>
-            <div class="box box_03">
-              <a href="#">
-                <div class="box_icon">
-                  <img
-                    src="images/discount.png"
-                    alt="왼쪽에는 회색동전 7개와 오른쪽에는 아래를 향하고 있는 파란색 화살표 1개로 이루어진 입체아이콘"
-                  />
-                </div>
-                <div class="box_text">할인제도</div>
-              </a>
+            <div
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom"
+              data-aos-offset="100"
+              data-aos-delay="150"
+              data-aos-duration="400"
+              data-aos-easing="ease-in-out"
+            >
+              <div class="box box_03">
+                <a href="#">
+                  <div class="box_icon">
+                    <img
+                      src="images/discount.png"
+                      alt="왼쪽에는 회색동전 7개와 오른쪽에는 아래를 향하고 있는 파란색 화살표 1개로 이루어진 입체아이콘"
+                    />
+                  </div>
+                  <div class="box_text">할인제도</div>
+                </a>
+              </div>
             </div>
-            <div class="box box_04">
-              <a href="#">
-                <div class="box_icon">
-                  <img
-                    src="images/lost_goods.png"
-                    alt="왼쪽에는 회색 휴대전화와 오른쪽에는 파란색 우산으로 이루어진 입체아이콘"
-                  />
-                </div>
-                <div class="box_text">유실물</div>
-              </a>
+            <div
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom"
+              data-aos-offset="100"
+              data-aos-delay="200"
+              data-aos-duration="400"
+              data-aos-easing="ease-in-out"
+            >
+              <div class="box box_04">
+                <a href="#">
+                  <div class="box_icon">
+                    <img
+                      src="images/lost_goods.png"
+                      alt="왼쪽에는 회색 휴대전화와 오른쪽에는 파란색 우산으로 이루어진 입체아이콘"
+                    />
+                  </div>
+                  <div class="box_text">유실물</div>
+                </a>
+              </div>
             </div>
-            <div class="box box_05">
-              <a href="#">
-                <div class="box_icon">
-                  <img
-                    src="images/ktx_express.png"
-                    alt="회색동전 바탕에 파란 선형 포인트가 있는 철로위 기차모양 입체 아이콘"
-                  />
-                </div>
-                <div class="box_text">KTX특송</div>
-              </a>
+            <div
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom"
+              data-aos-offset="100"
+              data-aos-delay="250"
+              data-aos-duration="400"
+              data-aos-easing="ease-in-out"
+            >
+              <div class="box box_05">
+                <a href="#">
+                  <div class="box_icon">
+                    <img
+                      src="images/ktx_express.png"
+                      alt="회색동전 바탕에 파란 선형 포인트가 있는 철로위 기차모양 입체 아이콘"
+                    />
+                  </div>
+                  <div class="box_text">KTX특송</div>
+                </a>
+              </div>
             </div>
-            <div class="box box_06">
-              <a href="#">
-                <div class="box_icon">
-                  <img
-                    src="images/time_table.png"
-                    alt="왼쪽에는 회색동전 7개와 오른쪽에는 파란색 시침, 분침이 있는 회색 테두리의 시계로 이루어진 입체 아이콘"
-                  />
-                </div>
-                <div class="box_text">
-                  열차운임/
-                  <p>시간표</p>
-                </div>
-              </a>
+            <div
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom"
+              data-aos-offset="100"
+              data-aos-delay="300"
+              data-aos-duration="400"
+              data-aos-easing="ease-in-out"
+            >
+              <div class="box box_06">
+                <a href="#">
+                  <div class="box_icon">
+                    <img
+                      src="images/time_table.png"
+                      alt="왼쪽에는 회색동전 7개와 오른쪽에는 파란색 시침, 분침이 있는 회색 테두리의 시계로 이루어진 입체 아이콘"
+                    />
+                  </div>
+                  <div class="box_text">
+                    열차운임/
+                    <p>시간표</p>
+                  </div>
+                </a>
+              </div>
             </div>
-            <div class="box box_07">
-              <a href="#">
-                <div class="box_icon">
-                  <img
-                    src="images/search_train.png"
-                    alt="파란 테두리의 돋보기 안에 회색 기차모양 입체아이콘"
-                  />
-                </div>
-                <div class="box_text">
-                  광역철도
-                  <p>노선검색</p>
-                </div>
-              </a>
+            <div
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom"
+              data-aos-offset="100"
+              data-aos-delay="350"
+              data-aos-duration="400"
+              data-aos-easing="ease-in-out"
+            >
+              <div class="box box_07">
+                <a href="#">
+                  <div class="box_icon">
+                    <img
+                      src="images/search_train.png"
+                      alt="파란 테두리의 돋보기 안에 회색 기차모양 입체아이콘"
+                    />
+                  </div>
+                  <div class="box_text">
+                    광역철도
+                    <p>노선검색</p>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -525,14 +593,32 @@
       <section class="bottom">
         <div class="inner">
           <div class="notice">
-            <h1>공지사항</h1>
+            <div
+              data-aos="fade-right"
+              data-aos-anchor-placement="top-bottom"
+              data-aos-offset="100"
+              data-aos-duration="400"
+              data-aos-easing="ease-in-out"
+              data-aos-once="true"
+            >
+              <h1>공지사항</h1>
+            </div>
             <table>
               <tr>
                 <td>
-                  <a href="#"
-                    ><p class="n_content">
-                      동해선 광역전철 운임조정 알림 ( ‘ 24. 7. 6.)
-                    </p>
+                  <a href="#">
+                    <div
+                      data-aos="fade-right"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-delay="50"
+                      data-aos-duration="400"
+                      data-aos-easing="ease-in-out"
+                      data-aos-once="true"
+                    >
+                      <p class="n_content">
+                        동해선 광역전철 운임조정 알림 ( ‘ 24. 7. 6.)
+                      </p>
+                    </div>
                     <span class="n_date">2024.06.27</span></a
                   >
                 </td>
@@ -540,9 +626,18 @@
               <tr>
                 <td>
                   <a href="#"
-                    ><p class="n_content">
-                      영동선 일반열차 환승 승차권 발매중지 안내
-                    </p>
+                    ><div
+                      data-aos="fade-right"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-delay="100"
+                      data-aos-duration="400"
+                      data-aos-easing="ease-in-out"
+                      data-aos-once="true"
+                    >
+                      <p class="n_content">
+                        영동선 일반열차 환승 승차권 발매중지 안내
+                      </p>
+                    </div>
                     <span class="n_date">2024.05.28</span></a
                   >
                 </td>
@@ -550,7 +645,16 @@
               <tr>
                 <td>
                   <a href="#"
-                    ><p class="n_content">동해산타열차 임시 운휴 알림</p>
+                    ><div
+                      data-aos="fade-right"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-delay="100"
+                      data-aos-duration="400"
+                      data-aos-easing="ease-in-out"
+                      data-aos-once="true"
+                    >
+                      <p class="n_content">동해산타열차 임시 운휴 알림</p>
+                    </div>
                     <span class="n_date">2024.05.28</span></a
                   >
                 </td>
@@ -558,7 +662,16 @@
               <tr>
                 <td>
                   <a href="#"
-                    ><p class="n_content">백두대간협곡열차 임시 운휴 알림</p>
+                    ><div
+                      data-aos="fade-right"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-delay="100"
+                      data-aos-duration="400"
+                      data-aos-easing="ease-in-out"
+                      data-aos-once="true"
+                    >
+                      <p class="n_content">백두대간협곡열차 임시 운휴 알림</p>
+                    </div>
                     <span class="n_date">2024.05.28</span></a
                   >
                 </td>
@@ -566,7 +679,16 @@
               <tr>
                 <td>
                   <a href="#"
-                    ><p class="n_content">현충일 임시열차 운행알림</p>
+                    ><div
+                      data-aos="fade-right"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-delay="100"
+                      data-aos-duration="400"
+                      data-aos-easing="ease-in-out"
+                      data-aos-once="true"
+                    >
+                      <p class="n_content">현충일 임시열차 운행알림</p>
+                    </div>
                     <span class="n_date">2024.05.10</span></a
                   >
                 </td>
@@ -574,9 +696,18 @@
               <tr>
                 <td>
                   <a href="#"
-                    ><p class="n_content">
-                      KTX-공항버스(6770) 시간표 변경 안내
-                    </p>
+                    ><div
+                      data-aos="fade-right"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-delay="100"
+                      data-aos-duration="400"
+                      data-aos-easing="ease-in-out"
+                      data-aos-once="true"
+                    >
+                      <p class="n_content">
+                        KTX-공항버스(6770) 시간표 변경 안내
+                      </p>
+                    </div>
                     <span class="n_date">2024.05.07</span></a
                   >
                 </td>
@@ -584,9 +715,18 @@
               <tr>
                 <td>
                   <a href="#"
-                    ><p class="n_content">
-                      태백, 영동선 지연 및 환승 승차권 발매중지 안내
-                    </p>
+                    ><div
+                      data-aos="fade-right"
+                      data-aos-anchor-placement="top-bottom"
+                      data-aos-delay="100"
+                      data-aos-duration="400"
+                      data-aos-easing="ease-in-out"
+                      data-aos-once="true"
+                    >
+                      <p class="n_content">
+                        태백, 영동선 지연 및 환승 승차권 발매중지 안내
+                      </p>
+                    </div>
                     <span class="n_date">2024.05.02</span></a
                   >
                 </td>
@@ -704,35 +844,36 @@
           <div class="f_right">
             <div class="sns">
               <ul>
-                <li>
-                  <a href="#"
-                    ><img src="images/naverblog.png" alt="네이버블로그 아이콘"
-                  /></a>
+                <li class="blog">
+                  <a href="#"></a>
                 </li>
-                <li>
-                  <a href="#"
-                    ><img src="images/facebook.png" alt="페이스북 아이콘"
-                  /></a>
+                <li class="facebook">
+                  <a href="#"></a>
                 </li>
-                <li>
-                  <a href="#"
-                    ><img src="images/instagram.png" alt="인스타그램 아이콘"
-                  /></a>
+                <li class="insta">
+                  <a href="#"></a>
                 </li>
-                <li>
-                  <a href="#"
-                    ><img src="images/youtube.png" alt="유튜브 아이콘"
-                  /></a>
+                <li class="youtube">
+                  <a href="#"></a>
                 </li>
-                <li>
-                  <a href="#"
-                    ><img src="images/twitter.png" alt="트위터 아이콘"
-                  /></a>
+                <li class="twitter">
+                  <a href="#"></a>
                 </li>
               </ul>
             </div>
+            <div class="fam_list">
+              <ul>
+                <li><a href="#">코레일 Family</a></li>
+                <li><a href="#">코레일 홈페이지</a></li>
+                <li><a href="#">물류정보</a></li>
+                <li><a href="#">윤리경영</a></li>
+                <li><a href="#">이사회커뮤니티</a></li>
+                <li><a href="#">조달 · 입찰</a></li>
+                <li><a href="#">철도박물관</a></li>
+              </ul>
+            </div>
             <div class="fam_site">
-              <a href="#">코레일 FAMILY</a>
+              <button>코레일 FAMILY</button>
             </div>
           </div>
           <div class="f_menu">
@@ -765,11 +906,24 @@
           disableOnInteraction: false,
         },
       });
+      AOS.init();
       $(".icon_close").click(function () {
         $(".banner").hide();
       });
-      $(".main_menu > li > a").mouseenter(function () {
-        $(".sub").css("height", "296px");
+      $(".main_menu").mouseenter(function () {
+        $(".sub").addClass("on");
+      });
+      $(".main_01").mouseleave(function () {
+        $(".sub").removeClass("on");
+      });
+      $(".main_01").mouseenter(function () {
+        $(".sub_01").addClass("on");
+      });
+      $(".main_01").mouseleave(function () {
+        $(".sub_01").removeClass("on");
+      });
+      $(".fam_site").click(function () {
+        $(".fam_list").toggle("on");
       });
     </script>
   </body>
