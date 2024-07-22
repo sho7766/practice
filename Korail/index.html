@@ -907,20 +907,60 @@
         },
       });
       AOS.init();
+      let lastScrollTop = 0;
+      delta = 15;
+      $(window).scroll(function (e) {
+        let st = $(this).scrollTop();
+        if (Math.abs(lastScrollTop - st) <= delta) return;
+        if (st > lastScrollTop && lastScrollTop > 0) {
+          $("header").css("top", "-150px");
+        } else {
+          $("header").css("top", "0px");
+        }
+        lastScrollTop = st;
+      });
       $(".icon_close").click(function () {
         $(".banner").hide();
       });
-      $(".main_menu").mouseenter(function () {
-        $(".sub").addClass("on");
-      });
-      $(".main_01").mouseleave(function () {
-        $(".sub").removeClass("on");
-      });
       $(".main_01").mouseenter(function () {
+        $(".sub").addClass("on");
         $(".sub_01").addClass("on");
       });
       $(".main_01").mouseleave(function () {
+        $(".sub").removeClass("on");
         $(".sub_01").removeClass("on");
+      });
+      $(".main_02").mouseenter(function () {
+        $(".sub").addClass("on");
+        $(".sub_02").addClass("on");
+      });
+      $(".main_02").mouseleave(function () {
+        $(".sub").removeClass("on");
+        $(".sub_02").removeClass("on");
+      });
+      $(".main_03").mouseenter(function () {
+        $(".sub").addClass("on");
+        $(".sub_03").addClass("on");
+      });
+      $(".main_03").mouseleave(function () {
+        $(".sub").removeClass("on");
+        $(".sub_03").removeClass("on");
+      });
+      $(".main_04").mouseenter(function () {
+        $(".sub").addClass("on");
+        $(".sub_04").addClass("on");
+      });
+      $(".main_04").mouseleave(function () {
+        $(".sub").removeClass("on");
+        $(".sub_04").removeClass("on");
+      });
+      $(".main_05").mouseenter(function () {
+        $(".sub").addClass("on");
+        $(".sub_05").addClass("on");
+      });
+      $(".main_05").mouseleave(function () {
+        $(".sub").removeClass("on");
+        $(".sub_05").removeClass("on");
       });
       $(".fam_site").click(function () {
         $(".fam_list").toggle("on");
