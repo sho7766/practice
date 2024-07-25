@@ -266,13 +266,14 @@ header .gnb {
 header .gnb .gnb_menu {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   max-width: 1400px;
   height: 100%;
   margin: 0 auto;
 }
 header .gnb .gnb_menu .logo {
-  width: 149px;
-  height: 60px;
+  width: 200px;
+  height: 25px;
   margin: 19px 0 20px 0;
 }
 header .gnb .gnb_menu .logo a {
@@ -286,9 +287,9 @@ header .gnb .gnb_menu .logo a img {
 }
 .gnb_menu .search {
   position: relative;
-  width: 368px;
-  height: 42px;
-  margin-left: 105px;
+  width: 355px;
+  height: 40px;
+  margin-left: -20px;
   overflow: hidden;
   border: 2px solid transparent;
   border-radius: 50px;
@@ -321,9 +322,6 @@ header .gnb .gnb_menu .logo a img {
 .gnb_menu .search input::placeholder {
   color: #999;
 }
-.gnb_menu .gnb_right {
-  margin-left: 115px;
-}
 .gnb_menu .gnb_right > ul {
   display: flex;
   align-items: center;
@@ -331,7 +329,7 @@ header .gnb .gnb_menu .logo a img {
 .gnb_menu .gnb_right .main_menu > li > a {
   position: relative;
   font-size: 18px;
-  padding: 39px 20px;
+  padding: 40px 20px;
 }
 .gnb_menu .gnb_right .main_menu > li a:after {
   content: "";
@@ -373,9 +371,9 @@ header .gnb .gnb_menu .logo a img {
   top: 100px;
   left: 0;
   width: 100%;
-  height: 0;
+  height: 296px;
   background: #fff;
-  display: flex;
+  display: none;
   justify-content: space-between;
   border-top: 1px solid #d9dfe2;
   transition: all 0.3s;
@@ -430,7 +428,7 @@ header .gnb .gnb_menu .logo a img {
 }
 .sub_menu .one_depth .two_depth li:hover a {
   font-weight: 600;
-  color: #003b82;
+  /* color: #003b82 */
   text-decoration: underline;
 }
 .main {
@@ -453,6 +451,7 @@ header .gnb .gnb_menu .logo a img {
 .main .reservation {
   width: 480px;
   height: 498px;
+  position: relative;
 }
 .main .reservation .cate {
   width: 100%;
@@ -476,6 +475,14 @@ header .gnb .gnb_menu .logo a img {
 .main .reservation .cate .travel {
   background-color: #003b82;
   color: #fff;
+}
+.main .reservation .cate div.blue {
+  background-color: #003b82;
+  color: #fff;
+}
+.main .reservation .cate div.white {
+  background-color: #fff;
+  color: #003b82;
 }
 .main .reservation .box {
   width: 100%;
@@ -591,6 +598,11 @@ header .gnb .gnb_menu .logo a img {
   font-size: 16px;
   font-family: Pretendard;
 }
+.travel_box {
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
 .main .inner .boxes .slide {
   width: 480px;
 }
@@ -642,6 +654,11 @@ header .gnb .gnb_menu .logo a img {
   font-size: 1.1rem !important;
   font-weight: 600 !important;
 }
+.slide .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #003b82;
+}
 .main .inner .boxes .small_box {
   display: flex;
   flex-direction: column;
@@ -653,7 +670,14 @@ header .gnb .gnb_menu .logo a img {
 .discount .box {
   width: 100%;
   height: 135px;
-  background: linear-gradient(#e8f4fd, #b2dbff);
+  background: linear-gradient(
+    180deg,
+    rgba(232, 244, 253, 0.3),
+    rgba(178, 219, 255, 0.3)
+  );
+}
+.discount .box:hover {
+  background: linear-gradient(180deg, #e8f4fd, #b2dbff);
 }
 .discount .box ul {
   display: flex;
@@ -668,6 +692,10 @@ header .gnb .gnb_menu .logo a img {
   text-align: center;
   padding: 45px 0 46px 0;
   cursor: pointer;
+  transition: all 0.2s;
+}
+.discount .box ul li:hover {
+  transform: translateY(-10px);
 }
 .discount .box ul li:after {
   content: "";
@@ -907,7 +935,7 @@ header .gnb .gnb_menu .logo a img {
 }
 .wrap footer {
   width: 100%;
-  height: 520px;
+  height: 453px;
   background-color: #fff;
 }
 footer .inner .f_banner {
@@ -918,8 +946,8 @@ footer .inner .f_banner ul {
   gap: 55px;
 }
 footer .inner .f_logo {
-  width: 149px;
-  height: 60px;
+  width: 209px;
+  height: 25px;
 }
 footer .inner .f_logo img {
   width: 100%;
@@ -1025,7 +1053,7 @@ footer .inner .f_right .sns ul li:last-child {
 }
 footer .inner .f_right .fam_list {
   position: absolute;
-  top: -69px;
+  top: -104px;
   width: 280px;
   background: #fff;
   border: 1px solid #555;

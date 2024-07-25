@@ -69,9 +69,7 @@
           <div class="gnb_menu">
             <div class="logo">
               <a href="#"
-                ><img
-                  src="images/lets_logo_blue.webp"
-                  alt="레츠코레일로고 블루"
+                ><img src="images/lets_logo_blue.png" alt="레츠코레일로고 블루"
               /></a>
             </div>
             <div class="search">
@@ -300,7 +298,7 @@
                   <p>기차여행검색</p>
                 </div>
               </div>
-              <div class="box">
+              <div class="box ticket_box">
                 <div class="location">
                   <div class="depart">
                     <div class="title">출발</div>
@@ -347,6 +345,51 @@
                   <button><a href="#">승차권예매</a></button>
                 </div>
               </div>
+              <div class="box travel_box">
+                <div class="location">
+                  <div class="depart">
+                    <div class="title">여행테마</div>
+                    <div class="city">관광지</div>
+                  </div>
+                  <div class="desti">
+                    <div class="title">여행지역</div>
+                    <div class="city">대전</div>
+                  </div>
+                </div>
+                <div class="schedule">
+                  <div class="cont">
+                    <span class="title">출발일</span>
+                    <div class="date_wrap">
+                      <div class="date">
+                        <div class="year">2024<span>년</span></div>
+                        <div class="month">6<span>월</span></div>
+                        <div class="days">18<span>일</span></div>
+                        <div class="day">
+                          <span>(</span><span>수</span><span>)</span>
+                        </div>
+                        <div class="time">
+                          <span class="hour">19</span><span class="mark">:</span
+                          ><span class="min">33</span>
+                        </div>
+                      </div>
+                      <button class="arrow_blue"></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="passenger">
+                  <div class="cont">
+                    <span class="title">상품명</span>
+                    <div class="travel_name" style="margin-top: 8px">
+                      <input type="text" style="padding: 8px" maxlength="30" />
+                    </div>
+                  </div>
+                </div>
+                <div class="reserve">
+                  <button>
+                    <a href="#" style="padding: 0">기차여행 검색</a>
+                  </button>
+                </div>
+              </div>
             </div>
             <div class="slide">
               <h1 class="box_title">EVENT</h1>
@@ -366,6 +409,7 @@
                   <div class="swiper-button-next"></div>
                   <div class="swiper-button-prev"></div>
                 </div>
+                <div class="swiper-pagination"></div>
               </div>
             </div>
             <div class="small_box">
@@ -431,6 +475,7 @@
             data-aos-anchor-placement="top-bottom"
             data-aos-duration="400"
             data-aos-easing="ease-in-out"
+            data-aos-once="true"
           >
             <h1>종합이용가이드</h1>
           </div>
@@ -442,6 +487,7 @@
               data-aos-delay="50"
               data-aos-duration="400"
               data-aos-easing="ease-in-out"
+              data-aos-once="true"
             >
               <div class="box box_01">
                 <a href="#">
@@ -465,6 +511,7 @@
               data-aos-delay="100"
               data-aos-duration="400"
               data-aos-easing="ease-in-out"
+              data-aos-once="true"
             >
               <div class="box box_02">
                 <a href="#">
@@ -488,6 +535,7 @@
               data-aos-delay="150"
               data-aos-duration="400"
               data-aos-easing="ease-in-out"
+              data-aos-once="true"
             >
               <div class="box box_03">
                 <a href="#">
@@ -508,6 +556,7 @@
               data-aos-delay="200"
               data-aos-duration="400"
               data-aos-easing="ease-in-out"
+              data-aos-once="true"
             >
               <div class="box box_04">
                 <a href="#">
@@ -528,6 +577,7 @@
               data-aos-delay="250"
               data-aos-duration="400"
               data-aos-easing="ease-in-out"
+              data-aos-once="true"
             >
               <div class="box box_05">
                 <a href="#">
@@ -548,6 +598,7 @@
               data-aos-delay="300"
               data-aos-duration="400"
               data-aos-easing="ease-in-out"
+              data-aos-once="true"
             >
               <div class="box box_06">
                 <a href="#">
@@ -571,6 +622,7 @@
               data-aos-delay="350"
               data-aos-duration="400"
               data-aos-easing="ease-in-out"
+              data-aos-once="true"
             >
               <div class="box box_07">
                 <a href="#">
@@ -823,7 +875,7 @@
             </ul>
           </div>
           <div class="f_logo">
-            <img src="images/logo_gray.png" alt="회색 레츠코레일로고" />
+            <img src="images/lets_logo_gray.png" alt="회색 레츠코레일로고" />
           </div>
           <div class="f_inform">
             <ul>
@@ -905,65 +957,54 @@
           delay: 2500,
           disableOnInteraction: false,
         },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
       });
       AOS.init();
-      let lastScrollTop = 0;
-      delta = 15;
-      $(window).scroll(function (e) {
-        let st = $(this).scrollTop();
-        if (Math.abs(lastScrollTop - st) <= delta) return;
-        if (st > lastScrollTop && lastScrollTop > 0) {
-          $("header").css("top", "-150px");
-        } else {
-          $("header").css("top", "0px");
-        }
-        lastScrollTop = st;
-      });
-      $(".icon_close").click(function () {
+      $(".btn_close").click(function () {
         $(".banner").hide();
       });
-      $(".main_01").mouseenter(function () {
-        $(".sub").addClass("on");
-        $(".sub_01").addClass("on");
+
+      $(".ticket").click(function () {
+        $(this).addClass("white");
+        $(".travel").addClass("blue");
+        $(".travel").removeClass("white");
       });
-      $(".main_01").mouseleave(function () {
-        $(".sub").removeClass("on");
-        $(".sub_01").removeClass("on");
+      $(".travel").click(function () {
+        $(this).addClass("white");
+        $(".ticket").addClass("blue");
+        $(".ticket").removeClass("white");
       });
-      $(".main_02").mouseenter(function () {
-        $(".sub").addClass("on");
-        $(".sub_02").addClass("on");
+      $(".cate .ticket").click(function () {
+        $(".ticket_box").show();
+        $(".travel_box").hide();
       });
-      $(".main_02").mouseleave(function () {
-        $(".sub").removeClass("on");
-        $(".sub_02").removeClass("on");
-      });
-      $(".main_03").mouseenter(function () {
-        $(".sub").addClass("on");
-        $(".sub_03").addClass("on");
-      });
-      $(".main_03").mouseleave(function () {
-        $(".sub").removeClass("on");
-        $(".sub_03").removeClass("on");
-      });
-      $(".main_04").mouseenter(function () {
-        $(".sub").addClass("on");
-        $(".sub_04").addClass("on");
-      });
-      $(".main_04").mouseleave(function () {
-        $(".sub").removeClass("on");
-        $(".sub_04").removeClass("on");
-      });
-      $(".main_05").mouseenter(function () {
-        $(".sub").addClass("on");
-        $(".sub_05").addClass("on");
-      });
-      $(".main_05").mouseleave(function () {
-        $(".sub").removeClass("on");
-        $(".sub_05").removeClass("on");
+      $(".cate .travel").click(function () {
+        $(".ticket_box").hide();
+        $(".travel_box").show();
       });
       $(".fam_site").click(function () {
         $(".fam_list").toggle("on");
+      });
+
+      $(".main_menu > li:not(:last-child)").mouseenter(function () {
+        $(".sub").eq($(this).index()).css({
+          display: "flex",
+        });
+        $(".sub_menu").eq($(this).index()).css({
+          display: "flex",
+        });
+      });
+
+      $(".main_menu > li").mouseleave(function () {
+        $(".sub").eq($(this).index()).css({
+          display: "none",
+        });
+      });
+      $(".sub").mouseenter(function () {
+        $(this).css("display", "flex");
       });
     </script>
   </body>
