@@ -304,9 +304,14 @@
                     <div class="title">출발</div>
                     <div class="city">영등포</div>
                   </div>
-                  <p class="arrow">
-                    <img src="images/arrow_right.png" alt="" />
-                  </p>
+                  <div>
+                    <div class="switch_btn">
+                      <p><img src="images/location_switch.png" alt="" /></p>
+                    </div>
+                    <p class="arrow">
+                      <img src="images/arrow_right.png" alt="" />
+                    </p>
+                  </div>
                   <div class="desti">
                     <div class="title">도착</div>
                     <div class="city">대전</div>
@@ -967,6 +972,9 @@
         $(".banner").hide();
       });
 
+      window.onload = function () {
+        $(".ticket").click();
+      };
       $(".ticket").click(function () {
         $(this).addClass("white");
         $(".travel").addClass("blue");
@@ -977,14 +985,22 @@
         $(".ticket").addClass("blue");
         $(".ticket").removeClass("white");
       });
-      $(".cate .ticket").click(function () {
+      $(".ticket").click(function () {
         $(".ticket_box").show();
         $(".travel_box").hide();
       });
-      $(".cate .travel").click(function () {
+      $(".travel").click(function () {
         $(".ticket_box").hide();
         $(".travel_box").show();
       });
+
+      // $(".switch_btn").click(function () {
+      //   $(".depart .title").replaceWith("도착");
+      //   $(".depart .city").replaceWith($(".desti .city"));
+      //   $(".desti .title").replaceWith("출발");
+      //   $(".desti .city").replaceWith($(".depart .city"));
+      // });
+
       $(".fam_site").click(function () {
         $(".fam_list").toggle("on");
       });
